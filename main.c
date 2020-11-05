@@ -15,14 +15,14 @@ int main(int argc, char *argv[])
 	{
 		ptr = grade+i;
 		printf("grade[%i] = ", i);
-		scanf("%d", &grade[i]);
+		scanf("%d", ptr);
 	}
 	
-	ptr = grade;
+
 	for(i=0; i<5; i++)
 	{
 		ptr = &grade[i];
-		sum+= *ptr;
+		sum += *ptr;
 		printf("grade[%d] = %d\n", i, *ptr);
 	}
 	 
