@@ -3,31 +3,17 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-
-int main(int argc, char *argv[]) 
-{
-	int i;
-	int grade[5];
-	int sum=0;
-	int *ptr;
+int main(void){
+	int i =10;
+	char c = 'a';
 	
-	for(i=0; i<5; i++)
-	{
-		ptr = grade+i;
-		printf("grade[%i] = ", i);
-		scanf("%d", ptr);
-	}
+	int *iptr = &i;
+	char *cptr = &c;
+	int *iptr2 = iptr;
 	
-
-	for(i=0; i<5; i++)
-	{
-		ptr = &grade[i];
-		sum += *ptr;
-		printf("grade[%d] = %d\n", i, *ptr);
-	}
-	 
-	 printf("average : %i\n", sum/5);
-
-	 	 
+	printf("i : %p\n%p(size:%i)\n", iptr, &i, sizeof(iptr));
+	printf("c : %p\n%p(size:%i)\n", cptr, &c, sizeof(cptr));
+	printf("iptr2 : %p, %i\n", iptr2, *iptr2);
+	
 	return 0;
-}
+	}
